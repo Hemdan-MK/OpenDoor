@@ -331,21 +331,21 @@ const courseData = {
             "title": "B.Design (Product Design)",
             "duration": "4 years",
             "description": "The program focuses on developing innovative, functional, and visually appealing products. Students learn design thinking, material studies, ergonomics, and prototyping to create solutions that enhance user experience and address real-world needs.",
-            "imageUrl": "./assets/Arts/productdesign.webp",
+            "imageUrl": "/assets/Arts/productdesign.webp",
             "specializations": []
         },
         {
             "title": "B.Design (Interaction Design)",
             "duration": "4 years",
             "description": "This program focuses on creating user-friendly digital experiences. Students learn user research, interface design, information architecture, and usability testing to design interactive, human-centered products and services.",
-            "imageUrl": "./assets/Arts/interaction design.webp",
+            "imageUrl": "/assets/Arts/interaction design.webp",
             "specializations": []
         },
         {
             "title": "B.Design (Communication Design)",
             "duration": "4 years",
             "description": "This program emphasizes visual storytelling and strategic messaging. Students gain skills in typography, branding, graphic design, and digital media to create impactful content across various platforms.",
-            "imageUrl": "./assets/Arts/communication design.webp",
+            "imageUrl": "/assets/Arts/communication design.webp",
             "specializations": []
         },
         {
@@ -366,7 +366,7 @@ const courseData = {
             "title": "BA Communication Design - Graphic Design",
             "duration": "4 years",
             "description": "The Graphic Design specialization focuses on visual communication through print and digital media. Students develop proficiency in typography, layout design, branding, illustration, and digital imaging while exploring conceptual thinking and creative problem-solving to create impactful visual solutions for various communication needs.",
-            "imageUrl": "./assets/Arts/graphic design.webp",
+            "imageUrl": "/assets/Arts/graphic design.webp",
             "specializations": []
         },
         {
@@ -387,21 +387,21 @@ const courseData = {
             "title": "BA - Fashion Design",
             "duration": "3 years",
             "description": "The BA in Fashion Design program develops creative and technical skills for the fashion industry. Students learn garment construction, pattern making, textile science, fashion illustration, and collection development while exploring fashion history, trends, and sustainable practices to prepare for careers in design, styling, and fashion entrepreneurship.",
-            "imageUrl": "./assets/Arts/fasion deign.webp",
+            "imageUrl": "/assets/Arts/fasion deign.webp",
             "specializations": []
         },
         {
             "title": "BA - Interactive Game Art, Design & Development",
             "duration": "3 years",
             "description": "This program focuses on creating compelling visual aesthetics and engaging experiences for games. Students develop skills in character design, environment art, 3D modeling, texturing, animation, game mechanics, level design, and user experience while learning industry-standard tools and collaborative development processes.",
-            "imageUrl": "./assets/Arts/gamedevelopment.webp",
+            "imageUrl": "/assets/Arts/gamedevelopment.webp",
             "specializations": []
         },
         {
             "title": "BFA - Painting",
             "duration": "4 years",
             "description": "The BFA in Painting program develops students' artistic vision and technical skills in various painting mediums. The curriculum covers color theory, composition, figurative and abstract approaches, mixed media techniques, and art history while encouraging personal expression and conceptual development through studio practice and critical discourse.",
-            "imageUrl": "./assets/Arts/painting.webp",
+            "imageUrl": "/assets/Arts/painting.webp",
             "specializations": []
         },
         {
