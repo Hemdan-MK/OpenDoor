@@ -331,7 +331,7 @@ const courseData = {
             "title": "B.Design (Product Design)",
             "duration": "4 years",
             "description": "The program focuses on developing innovative, functional, and visually appealing products. Students learn design thinking, material studies, ergonomics, and prototyping to create solutions that enhance user experience and address real-world needs.",
-            "imageUrl": "./assets/Arts/product design.webp",
+            "imageUrl": "./assets/Arts/productdesign.webp",
             "specializations": []
         },
         {
