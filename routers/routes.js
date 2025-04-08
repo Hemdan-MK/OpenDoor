@@ -487,21 +487,21 @@ const courseData = {
             "title": "BA - International Relations",
             "duration": "3 years",
             "description": "Examines global politics, diplomacy, and cross-cultural issues. Students analyze international conflicts, cooperation, and global governance while developing skills for careers in diplomacy, international organizations, and global business.",
-            "imageUrl": "/assets/humanities/international relations.webp",
+            "imageUrl": "/assets/humanities/international relation.webp",
             "specializations": []
         },
         {
             "title": "BA LLB (Hons)",
             "duration": "5 years",
             "description": "An integrated program combining humanities with legal education. Students develop critical thinking, legal reasoning, and advocacy skills for careers in litigation, corporate law, and legal policy.",
-            "imageUrl": "/assets/humanities/ba llb.webp",
+            "imageUrl": "/assets/humanities/llb1.webp",
             "specializations": []
         },
         {
             "title": "BBA LLB (Hons)",
             "duration": "5 years",
             "description": "Combines business administration with legal studies. Students develop management, financial, and legal expertise for careers in corporate law, business compliance, and legal consulting.",
-            "imageUrl": "/assets/humanities/bba llb.webp",
+            "imageUrl": "/assets/humanities/llb2.webp",
             "specializations": []
         }
     ],
