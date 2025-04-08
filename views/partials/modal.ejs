@@ -1,0 +1,59 @@
+<!-- <div id="modal-container">
+	<div class="modal-background">
+		<div class="modal">
+			<h2>I'm a Modal</h2>
+			<p>Hear me roar.</p>
+			<svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+				<rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+			</svg>
+		</div>
+	</div>
+</div> -->
+
+
+<!-- partials/modal.ejs -->
+<div class="whatsapp-modal">
+	<a href="https://wa.me/918714144919" target="_blank" class="whatsapp-button">
+		<i class="fab fa-whatsapp whatsapp-icon"></i>
+		<span class="whatsapp-text">Chat with us</span>
+	</a>
+</div>
+
+<style>
+	.whatsapp-modal {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 1000;
+	}
+
+	.whatsapp-button {
+		display: flex;
+		align-items: center;
+		background-color: #25D366;
+		color: white;
+		padding: 10px 20px;
+		border-radius: 30px;
+		text-decoration: none;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		transition: all 0.3s ease;
+	}
+
+	.whatsapp-button:hover {
+		background-color: #128C7E;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+		color: white;
+		text-decoration: none;
+	}
+
+	.whatsapp-icon {
+		font-size: 24px;
+		margin-right: 10px;
+	}
+
+	.whatsapp-text {
+		font-weight: bold;
+		font-size: 14px;
+	}
+</style>

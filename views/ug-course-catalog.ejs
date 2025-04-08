@@ -1,0 +1,68 @@
+<!-- views/course-catalog.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('./partials/header') %>
+</head>
+
+<body>
+	<%- include('./partials/navbar', {path: '/'}) %>
+	<div class="edu-header">
+		<img src="<%= category.headerImage %>" loading="lazy" decoding="async" alt="<%= category.imageAlt %>">
+		<div class="edu-overlay">
+			<h1 class="edu-header-title"><%= category.title %></h1>
+			<p class="edu-header-description"><%= category.subtitle %></p>
+		</div>
+	</div>
+
+	<!-- <div class="cc-header scroll-reveal">
+		<img src="" >
+		<div class="cc-overlay">
+			<h1 class="cc-header-title"></h1>
+			<p class="cc-header-subtitle"></p>
+		</div>
+	</div> -->
+
+	<div class="cc-section-header scroll-reveal ">
+		<h2 class="cc-section-title"><%= category.sectionTitle %></h2>
+		<p class="cc-section-desc"><%= category.sectionDescription %></p>
+	</div>
+
+	<div class="cc-courses-wrapper scroll-reveal">
+		<% courses.forEach( async function(course) { %>
+		<div class="cc-course-item ">
+			<div class="cc-course-img-container scroll-reveal">
+				<img as="image" decoding="async" loading="eager" src="<%= course.imageUrl %>" alt="<%= course.title %>">
+				<div class="cc-course-img-overlay">
+					<h2 class="cc-course-heading"><%= course.title %></h2>
+					<p class="cc-course-duration">Duration: <%= course.duration %></p>
+				</div>
+			</div>
+			<div class="cc-course-body">
+				<div class="cc-course-desc">
+					<%= course.description %>
+				</div>
+				<% if (course.specializations && course.specializations.length > 0) { %>
+				<div class="cc-spec-container">
+					<p class="cc-spec-heading">Specializations:</p>
+					<div class="cc-spec-tags">
+						<% course.specializations.forEach(function(spec) { %>
+						<span class="cc-spec-tag-item"><%= spec %></span>
+						<% }); %>
+					</div>
+				</div>
+				<% } %>
+			</div>
+		</div>
+		<% }); %>
+	</div>
+
+	<%- include('./partials/footer') %>
+
+
+	<script src="/js/styles.js"></script>
+
+</body>
+
+</html>

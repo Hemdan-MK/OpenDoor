@@ -1,0 +1,351 @@
+<!-- views/course-catalog.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('./partials/header') %>
+</head>
+
+<body>
+	<%- include('./partials/navbar', {path: '/'}) %>
+
+	<div class="pg-header">
+		<img src="/assets/albert-vincent-wu-m7yOJx0ALME-unsplash.webp" alt="Postgraduate students working in a laboratory">
+		<div class="pg-overlay">
+			<h1 class="pg-header-title">Postgraduate Programs</h1>
+			<p class="pg-header-subtitle">Advance your career with our specialized postgraduate programs designed to equip you with advanced knowledge and expertise in your chosen field</p>
+		</div>
+	</div>
+
+	<div class="pg-section-header">
+		<h2 class="pg-section-title">Explore Our Postgraduate Programs</h2>
+		<p class="pg-section-description">Browse through our comprehensive range of postgraduate programs designed to deepen your expertise and advance your career. From cutting-edge engineering disciplines to advanced healthcare specializations, our courses prepare you to make a lasting impact in your chosen field.
+		</p>
+	</div>
+
+	<div class="pg-category-section">
+		<h2 class="pg-category-header pg-engineering">Engineering</h2>
+		<div class="pg-courses-container">
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/embedded systems.webp" alt="Embedded Systems & VLSI">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Embedded Systems & VLSI Design</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program blends embedded systems and VLSI design to build advanced electronic systems. Students learn microcontroller design, FPGA implementation, IC design, and system-on-chip architectures, preparing them for roles in semiconductor and electronics industries.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/energy.webp" alt="Energy & Environmental Management">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Energy & Environmental Management</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This interdisciplinary program covers sustainable energy systems and environmental conservation. Students explore renewable technologies, energy efficiency, impact assessment, and policy, equipping them to tackle sustainability challenges across industries.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/structural.webp" alt="Structural Engineering">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Structural Engineering</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program specializes in advanced structural analysis and design under diverse loads and conditions. Students study structural dynamics, earthquake engineering, advanced materials, and rehabilitation techniques, preparing for roles in construction, consultancy, and research.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/civil.webp" alt="Civil Engineering">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Civil Engineering</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program offers advanced training in structural, geotechnical, transportation, and water resource engineering. Students gain skills in sustainable construction, infrastructure planning, and project management, preparing for leadership roles in civil infrastructure development.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/electrical .webp" alt="Electric Vehicle Technology">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Electric Vehicle Technology</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program covers the design and management of electric vehicles and infrastructure. Students learn electric propulsion, battery tech, power electronics, and smart charging, with exposure to trends like autonomous and connected vehicles—preparing them for careers in the evolving automotive sector.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/artficial.webp" alt="Artificial Intelligence">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Artificial Intelligence</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program explores the theory and applications of artificial intelligence. Students gain skills in machine learning, deep learning, NLP, computer vision, and AI ethics, with hands-on projects using advanced tools—preparing them to build intelligent, adaptive systems across industries.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/data science.webp" alt="Data Science">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Data Science</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program blends statistics, mathematics, and computer science to extract insights from data. Students gain skills in data mining, predictive modeling, visualization, and machine learning, preparing them to drive data-informed decisions across industries.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/cyber.webp" alt="Cybersecurity">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Cybersecurity</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program focuses on protecting systems, networks, and data from cyber threats. Students learn cryptography, ethical hacking, forensics, and security governance, preparing them to design secure systems and defend against evolving cyberattacks.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/computer science.webp" alt="Computer Science & Engineering">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Tech Computer Science & Engineering</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program offers in-depth knowledge in core areas like algorithms, distributed systems, software engineering, and databases. Students also explore emerging tech such as cloud computing, IoT, and edge computing—preparing for leadership roles in development, architecture, and research.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pg-category-section">
+		<h2 class="pg-category-header pg-medical">Medical & Healthcare</h2>
+		<div class="pg-courses-container">
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/molecular.webp" alt="Molecular Medicine & Stem Cell Technologies">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Molecular Medicine & Stem Cell Technologies</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program combines molecular biology with stem cell research to explore regenerative therapies. Students learn tissue engineering, gene editing, and clinical applications, gaining hands-on lab skills and ethical insights for careers in biotech, research, and healthcare.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/cancer biology.webp" alt="Cancer Biology">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Cancer Biology</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program explores the molecular and cellular basis of cancer. Students study oncogenes, tumor suppressors, genomics, and immunotherapy, preparing for roles in cancer research, drug development, clinical trials, and precision medicine.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/neuro.webp" alt="Psychology - Clinical, Neuro Psychology">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Psychology - Clinical, Neuro Psychology</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program offers specialized tracks in clinical and neuropsychology. Students develop skills in assessment, therapy, and cognitive rehabilitation, with hands-on clinical experience—preparing them for careers in mental health, neuro-rehab, and research.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/nutrietion.webp" alt="Nutrition & Dietetics">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Nutrition & Dietetics</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program delves into nutrition science with applications in clinical care, public health, and sports. Students study nutrigenomics, clinical nutrition, and dietary interventions, gaining research and practical skills for roles in dietetics, consulting, and public health.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/hospital administration.webp" alt="Hospital Administration">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Hospital Administration</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program focuses on managing healthcare facilities, covering healthcare economics, quality management, HR, informatics, and legal aspects. It blends management principles with healthcare knowledge, preparing graduates for leadership roles in hospitals and health systems.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/embryology.webp" alt="Clinical Embryology & Assisted Reproductive Technology">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Clinical Embryology & Assisted Reproductive Technology</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program covers the science and technology of assisted reproduction, including embryo culture, gamete handling, and reproductive genetics. With strong lab training, graduates are prepared for careers in IVF clinics, fertility centers, and research labs.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/virology.webp" alt="Virology and Immunology">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Virology and Immunology</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program explores viruses, immune responses, and their interplay. Students learn about pathogenesis, vaccine development, and emerging diseases, with hands-on lab training—preparing for roles in diagnostics, pharma, research, and public health.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pg-category-section">
+		<h2 class="pg-category-header pg-commerce">Commerce & Management</h2>
+		<div class="pg-courses-container">
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/mcom.webp" alt="M.Com with Financial Analytics">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Com (FA with KPMG, ACCA, Electives)</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						Offered in collaboration with KPMG, this program includes ACCA certification prep and focuses on financial accounting, taxation, corporate finance, and analytics. With case studies and industry projects, it prepares graduates for careers in accounting, finance, and consulting.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/aviation.webp" alt="MBA Corporate Management Studies">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">MBA (CMS) - ESG & Aviation, Family Business Management</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This MBA program offers specializations in ESG & Aviation Management, Family Business, International Business, and Executive MBA. Blending core business skills with niche expertise, it prepares graduates for leadership roles across diverse industries.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pg-category-section">
+		<h2 class="pg-category-header pg-engineering">Computer Science & IT</h2>
+		<div class="pg-courses-container">
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/computer science (1).webp" alt="Computer Science & IT">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Computer Science & IT</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program offers advanced knowledge in computer science and IT, covering algorithms, distributed systems, network security, and software development. It balances theory with practical skills, preparing graduates for roles in development, architecture, and IT management.
+					</div>
+				</div>
+			</div>
+
+			<div class="pg-course-card">
+				<div class="pg-course-image">
+					<img src="/assets/pg/full stack .webp" alt="Full Stack Development">
+					<div class="pg-course-overlay">
+						<h2 class="pg-course-title">M.Sc Full Stack Development</h2>
+						<p class="pg-course-duration">Duration: 2 years</p>
+					</div>
+				</div>
+				<div class="pg-course-content">
+					<div class="pg-course-description">
+						This program focuses on full-stack web and mobile app development, covering frontend frameworks, backend systems, databases, cloud deployment, and DevOps. With a project-based approach, it prepares graduates to build scalable and secure applications across industries.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%- include('./partials/footer') %>
+	<script src="/js/styles.js"></script>
+
+</body>
+
+</html>

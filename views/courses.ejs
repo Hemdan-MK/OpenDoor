@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('./partials/header') %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+</head>
+
+<body>
+	<%- include('./partials/navbar', {path: '/'}) %>
+
+	<div class="edu-header">
+		<img src="/assets/annie-spratt-QckxruozjRg-unsplash.webp" alt="Students working with technology">
+		<div class="edu-overlay">
+			<h1 class="edu-header-title">Explore Your Future</h1>
+			<p class="edu-header-description">Discover the perfect educational pathway to launch your career and achieve your dreams</p>
+		</div>
+	</div>
+
+	<!-- <h2 class="edu-section-title">Academic Programs</h2> -->
+	<!-- <p class="edu-section-description">Browse through our diverse range of academic programs designed to provide you with the knowledge and skills needed for success in today's competitive world. Each category offers specialized courses tailored to your interests and career goals.</p> -->
+
+	<div class="edu-categories-container">
+		<div class="edu-category-card">
+			<img src="/assets/engineering (2).webp" alt="Engineering">
+			<div class="edu-category-info">
+				<div class="edu-category-title">Engineering & Technology</div>
+				<div class="edu-course-list">UG | Power-Up Courses</div>
+			</div>
+		</div>
+
+		<div class="edu-category-card">
+			<img src="/assets/medical.webp" alt="Medical">
+			<div class="edu-category-info">
+				<div class="edu-category-title">Medical & Healthcare</div>
+				<div class="edu-course-list">MBBS | BDS | Nursing | Allied Health</div>
+			</div>
+		</div>
+
+		<div class="edu-category-card">
+			<img src="/assets/arts.webp" alt="Design">
+			<div class="edu-category-info">
+				<div class="edu-category-title">Creative Arts & Design</div>
+				<div class="edu-course-list">Animation | Media | Fashion</div>
+			</div>
+		</div>
+
+		<div class="edu-category-card">
+			<img src="/assets/humanities.webp" alt="Humanities">
+			<div class="edu-category-info">
+				<div class="edu-category-title">Law, Humanities & Social Sciences</div>
+				<div class="edu-course-list">BA | MA | Sociology | Political Science</div>
+			</div>
+		</div>
+
+		<div class="edu-category-card">
+			<img src="/assets/bussiness.webp" alt="Business">
+			<div class="edu-category-info">
+				<div class="edu-category-title">Business & Management</div>
+				<div class="edu-course-list">BBA | MBA | Finance | Marketing</div>
+			</div>
+		</div>
+
+		<div class="edu-category-card">
+			<img src="/assets/post.webp" alt="Business">
+			<div class="edu-category-info">
+				<div class="edu-category-title">PG Programs</div>
+				<div class="edu-course-list">M.TECH | M.COM | MA | M.SC</div>
+			</div>
+		</div>
+	</div>
+
+	<%- include('./partials/footer') %>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			// Get all category cards
+			const categoryCards = document.querySelectorAll('.edu-category-card');
+
+			// Define the paths for each category
+			const categoryPaths = {
+				'Engineering & Technology': '/courses/ug/engineering-technology',
+				'Medical & Healthcare': '/courses/ug/medical-healthcare',
+				'Creative Arts & Design': '/courses/ug/creative-arts-design',
+				'Law, Humanities & Social Sciences': '/courses/ug/law-humanities-social-science',
+				'Business & Management': '/courses/ug/business-management',
+				'PG Programs': '/courses/pg/pg-programs'
+			};
+
+			// Add click event listeners to each card
+			categoryCards.forEach(card => {
+				card.addEventListener('click', function() {
+					// Get the category title from the card
+					const categoryTitle = this.querySelector('.edu-category-title').textContent;
+
+					// Get the corresponding path from our path mapping
+					const path = categoryPaths[categoryTitle];
+
+					if(path) {
+						// Navigate to the path
+						window.location.href = path;
+
+						// You can also use history.pushState for SPA navigation
+						// history.pushState({}, '', path);
+						// handleRouteChange(path); // Your route handler function
+					}
+				});
+
+				// Add cursor pointer to indicate clickable
+				card.style.cursor = 'pointer';
+			});
+		});
+	</script>
+
+	<script defer src="/js/form.js"></script>
+</body>
+
+
+</html>

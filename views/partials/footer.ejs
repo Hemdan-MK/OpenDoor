@@ -1,0 +1,532 @@
+<style>
+	/* Modal Styles */
+	.modal-content {
+		border-radius: 8px;
+		border: none;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+	}
+
+	.modal-header {
+		border-bottom: 1px solid #eaeaea;
+		background-color: #fff;
+		border-radius: 8px 8px 0 0;
+	}
+
+	.modal-title {
+		font-weight: 600;
+		color: #333;
+	}
+
+	.modal-body {
+		padding: 1.5rem;
+		background-color: #fff;
+	}
+
+	.modal-footer {
+		border-top: 1px solid #eaeaea;
+		background-color: #fff;
+		border-radius: 0 0 8px 8px;
+	}
+
+	/* Content Styling */
+	.services-content h3,
+	.services-content h4,
+	.terms-content h4,
+	.privacy-content h4 {
+		color: #333;
+		margin-top: 1.2rem;
+		margin-bottom: 0.8rem;
+	}
+
+	.service-item {
+		padding: 15px;
+		border-radius: 8px;
+		background-color: #fff;
+		border: 1px solid #eaeaea;
+		transition: all 0.3s ease;
+	}
+
+	.service-item:hover {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+		transform: translateY(-3px);
+	}
+
+	/* FAQ Accordion Styling */
+	.accordion-item {
+		border: 1px solid #eaeaea;
+		border-radius: 6px !important;
+		margin-bottom: 10px;
+		overflow: hidden;
+	}
+
+	.accordion-button {
+		background-color: #fff;
+		color: #333;
+		font-weight: 600;
+		box-shadow: none;
+	}
+
+	.accordion-button:not(.collapsed) {
+		background-color: #fff9f4;
+		color: #ff7700;
+	}
+
+	.accordion-button:focus {
+		box-shadow: none;
+		border-color: #eaeaea;
+	}
+
+	/* Support Cards */
+	.support-card {
+		border-radius: 8px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+		transition: all 0.3s ease;
+		height: 100%;
+		background-color: #fff;
+	}
+
+	.support-card:hover {
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+		transform: translateY(-5px);
+	}
+
+	/* Button Styling */
+	.btn-primary {
+		background-color: #ff7700;
+		border: none;
+		padding: 8px 20px;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+
+	.btn-primary:hover {
+		background-color: #e56b00;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.btn-secondary {
+		background-color: #333;
+		border: none;
+		padding: 8px 20px;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+
+	.btn-secondary:hover {
+		background-color: #222;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+        
+</style>
+
+
+<!-- Modals for footer links -->
+
+<!-- Services Modal -->
+<div class="modal fade" id="servicesModal" tabindex="-1" aria-labelledby="servicesModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="servicesModalLabel">Our Services</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="services-content">
+					<h3>Educational Counseling Services</h3>
+					<p>At Open Door Education, we offer comprehensive guidance to help students achieve their educational goals:</p>
+
+					<div class="service-item mb-4">
+						<h4>Academic Counseling</h4>
+						<p>Personalized guidance to help students choose the right courses and academic paths aligned with their career goals and interests.</p>
+					</div>
+
+					<div class="service-item mb-4">
+						<h4>College Application Assistance</h4>
+						<p>Complete support through the college application process, including documentation, personal statements, and application reviews.</p>
+					</div>
+
+					<div class="service-item mb-4">
+						<h4>Interview Preparation</h4>
+						<p>Comprehensive preparation sessions for college and scholarship interviews to help students present themselves confidently.</p>
+					</div>
+
+					<div class="service-item mb-4">
+						<h4>Scholarship Guidance</h4>
+						<p>Information and assistance with finding and applying for scholarships and financial aid opportunities.</p>
+					</div>
+
+					<div class="service-item">
+						<h4>Career Counseling</h4>
+						<p>Expert advice on potential career paths based on students' skills, interests, and academic performance.</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Terms & Conditions Modal -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="terms-content">
+					<p>Please read our terms and conditions carefully before using Open Door Education services.</p>
+
+					<h4>1. Acceptance of Terms</h4>
+					<p>By accessing or using Open Door Education's services, you agree to comply with these terms and conditions. If you do not agree, please refrain from using our services.</p>
+
+					<h4>2. Scope of Services</h4>
+					<p>Open Door Education provides professional counseling, guidance, and application facilitation for educational institutions. Our role is limited to supporting you in the admission process and does not guarantee admission to any specific institution.</p>
+
+					<h4>3. User Responsibilities</h4>
+					<ul>
+						<li>You agree to provide accurate and up-to-date information throughout the admission process.</li>
+						<li>You must comply with the timelines and deadlines provided by Open Door Education.</li>
+						<li>Any fraudulent or misleading information may result in disqualification from services.</li>
+					</ul>
+
+					<h4>4. Payments and Refund Policy</h4>
+					<ul>
+						<li>Fees for our services must be paid in full before the commencement of the admission process.</li>
+						<li>Payments are non-refundable unless explicitly agreed upon under exceptional circumstances.</li>
+					</ul>
+
+					<h4>5. Limitation of Liability</h4>
+					<p>Open Door Education will not be held liable for delays, failures, or decisions made by educational institutions. While we strive to offer accurate advice and guidance, admission outcomes are beyond our control.</p>
+
+					<h4>6. Confidentiality</h4>
+					<p>We respect your privacy and will handle all personal information with the utmost confidentiality. Your data will only be used for admission-related purposes in compliance with our privacy policy.</p>
+
+					<h4>7. Modifications to Terms</h4>
+					<p>Open Door Education reserves the right to modify these Terms and Conditions at any time. You will be notified of changes, and continued use of our services will indicate your acceptance of the revised terms.</p>
+
+					<h4>8. Contact Us</h4>
+					<p>For questions or support, please contact us. Email: <strong>opendooreducation@gmail.com</strong></p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Privacy Policy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="privacy-content">
+					<p>At Open Door Education, we value your privacy and are committed to safeguarding your personal information.</p>
+
+					<h4>1. Information We Collect</h4>
+					<ul>
+						<li><strong>Personal Information:</strong> We collect details such as your name, email address, phone number, academic history, and other relevant information provided when you contact us or use our services.</li>
+						<li><strong>Automatic Data:</strong> When you visit our website, we may collect information like your IP address, browser type, device details, and cookies to enhance your experience.</li>
+					</ul>
+
+					<h4>2. How We Use Your Information</h4>
+					<p>We use your information to:</p>
+					<ul>
+						<li>Provide personalized admission counseling and related services.</li>
+						<li>Communicate with you regarding updates, offers, and support.</li>
+						<li>Analyze user behavior to improve our platform's efficiency and user experience.</li>
+						<li>Ensure compliance with legal and regulatory requirements.</li>
+					</ul>
+
+					<h4>3. Sharing Your Information</h4>
+					<ul>
+						<li>Your information will not be shared, sold, or rented to third parties without your consent.</li>
+						<li>We may share information with trusted partners or institutions solely for the purpose of facilitating the admission process.</li>
+						<li>Information may be shared when required by law or to protect our rights and services.</li>
+					</ul>
+
+					<h4>4. Data Security</h4>
+					<p>Open Door Education implements industry-standard security measures to protect your personal data from unauthorized access, disclosure, or misuse. However, no method of transmission over the internet is completely secure, and we encourage you to take precautions.</p>
+
+					<h4>5. Your Rights</h4>
+					<p>You have the right to:</p>
+					<ul>
+						<li>Access the personal data we hold about you.</li>
+						<li>Update or correct inaccuracies in your data.</li>
+						<li>Request deletion of your personal information, subject to legal requirements.</li>
+						<li>Opt-out of marketing communications at any time by contacting us.</li>
+					</ul>
+
+					<h4>6. Cookies and Tracking</h4>
+					<p>Our website uses cookies and tracking tools to improve functionality and user experience. You can manage your cookie preferences through your browser settings.</p>
+
+					<h4>7. Changes to This Policy</h4>
+					<p>Open Door Education reserves the right to update this Privacy Policy. Changes will be posted on this page, and we encourage you to review it periodically.</p>
+
+					<h4>8. Contact Us</h4>
+					<p>If you have any questions or concerns regarding our Privacy Policy, please contact us. Email: <strong>opendooreducation@gmail.com</strong></p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- FAQ Modal -->
+<div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="faqModalLabel">Frequently Asked Questions</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="faq-content">
+					<p>Get answers to common queries about our admission services and processes.</p>
+
+					<div class="accordion" id="faqAccordion">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="faqOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									1. What services do you provide?
+								</button>
+							</h2>
+							<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+								<div class="accordion-body">
+									We provide expert admission counseling, application assistance, and personalized guidance to help you get into your desired institution.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="faqTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									2. How do I start the admission process?
+								</button>
+							</h2>
+							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+								<div class="accordion-body">
+									You can get started by reaching out to us through the <strong>Contact Us</strong> page or calling us directly at <strong>1234567890</strong>.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="faqThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									3. Do you provide support for international admissions?
+								</button>
+							</h2>
+							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+								<div class="accordion-body">
+									Yes, we specialize in both domestic and international admissions, guiding you through visa processes, documentation, and interviews.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="faqFour">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									4. What are your consultation fees?
+								</button>
+							</h2>
+							<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqAccordion">
+								<div class="accordion-body">
+									Our fees vary based on the services you require. Contact us for a detailed fee structure and package options.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="faqFive">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+									5. Can you assist with scholarship applications?
+								</button>
+							</h2>
+							<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqAccordion">
+								<div class="accordion-body">
+									Absolutely! We help identify scholarship opportunities and guide you through the application process to maximize your chances of success.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Support Modal -->
+<div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="supportModalLabel">Customer Support</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="support-content">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="support-card text-center p-4 mb-4">
+								<i class="fas fa-phone-alt fa-3x mb-3" style="color: #ff7700;"></i>
+								<h4>Call Us</h4>
+								<p>Have urgent questions? Reach out to us directly.</p>
+								<p class="fw-bold">+91 1234567890</p>
+								<p class="text-muted">Available 9 AM - 6 PM (Mon-Sat)</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="support-card text-center p-4 mb-4">
+								<i class="fas fa-envelope fa-3x mb-3" style="color: #ff7700;"></i>
+								<h4>Email Support</h4>
+								<p>Send us your queries and we'll respond within 24 hours.</p>
+								<p class="fw-bold">opendooreducation@gmail.com</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Form has been removed as requested -->
+					<div class="text-center mt-4">
+						<h4>Need Immediate Assistance?</h4>
+						<p class="mb-4">Our support team is available to help you with any questions or concerns.</p>
+						<a href="/contactus" class="btn btn-primary px-4">Contact Us</a>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="top-footer">
+	<div class="top-footer-content">
+		<h3>Confused About Admissions? Talk to Our Experts for Free!</h3>
+		<a href="/contactus"> <button>Call Now</button></a>
+	</div>
+</div>
+
+<footer class="footer">
+	<div class="footer-container">
+		<div class="logo-section">
+			<img src="/assets/logo2.webp" alt="Open Door Education Logo">
+		</div>
+
+		<div class="footer-section contact-section-wrapper">
+			<div class="contact-section">
+				<div class="contact-container">
+					<div class="footer-title">Contact Us</div>
+					<div class="contact-info">
+						<div class="contact-item">
+							<i class="contact-icon fas fa-phone"></i>
+							<span>91 12345 67890</span>
+						</div>
+						<div class="contact-item">
+							<i class="contact-icon fas fa-envelope"></i>
+							<span>opendoor@gmail.com</span>
+						</div>
+						<div class="contact-item">
+							<i class="contact-icon fas fa-map-marker-alt"></i>
+							<span>Near Abc building, Kerala</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="social-icons">
+				<a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+				<a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+				<a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social-icon youtube"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> </a>
+			</div>
+		</div>
+
+
+		<div class="footer-section quick-links-section">
+			<div class="footer-title">Quick Links</div>
+			<div class="quick-links">
+				<a href="/">Home</a>
+				<a href="/about">About</a>
+				<a href="/courses">Courses</a>
+				<a href="/college">Colleges</a>
+				<a href="/contactus">Contact</a>
+			</div>
+		</div>
+
+		<div class="footer-section helpful-links-section">
+			<div class="footer-title">Helpful Links</div>
+			<div class="helpful-links">
+				<a href="#">Services</a>
+				<a href="#">Terms & Condition</a>
+				<a href="#">Privacy Policy</a>
+				<a href="#">FAQ</a>
+				<a href="#">Support</a>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="footer-bottom">
+		<p>© <%= new Date().getFullYear() %> Open Door Education. All Rights Reserved.</p>
+	</div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom Script -->
+<script defer src="/js/styles.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		// Define the links and their corresponding modals
+		const modalLinks = [{
+				selector: '.helpful-links a:nth-child(1)',
+				modalId: '#servicesModal'
+			},
+			{
+				selector: '.helpful-links a:nth-child(2)',
+				modalId: '#termsModal'
+			},
+			{
+				selector: '.helpful-links a:nth-child(3)',
+				modalId: '#privacyModal'
+			},
+			{
+				selector: '.helpful-links a:nth-child(4)',
+				modalId: '#faqModal'
+			},
+			{
+				selector: '.helpful-links a:nth-child(5)',
+				modalId: '#supportModal'
+			}
+		];
+
+		// Set click event listeners for each link
+		modalLinks.forEach(link => {
+			const element = document.querySelector(link.selector);
+			if(element) {
+				element.setAttribute('href', 'javascript:void(0);');
+				element.setAttribute('data-bs-toggle', 'modal');
+				element.setAttribute('data-bs-target', link.modalId);
+			}
+		});
+	});
+</script>
