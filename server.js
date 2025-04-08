@@ -29,7 +29,6 @@ app.use('/', routes)
 
 app.listen(3000, () => {
     console.log(`------------------------------------------`),
-        console.log(`USER SIDE   :  http://localhost:3000/home`),
-        console.log(`ADMIN SIDE  :  http://localhost:3000/admin`)
+        console.log(`USER SIDE   :  http://localhost:3000/`),
     console.log(`------------------------------------------`)
 })

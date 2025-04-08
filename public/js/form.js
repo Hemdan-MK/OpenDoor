@@ -7,24 +7,110 @@ AOS.init({
 // Course data - would typically come from a database
 const courseData = {
     ug: [
+        // Business Management
+        "B.Com (Regular)",
+        "B.Com (Professional)",
+        "B.Com Honours (FAAT)",
+        "B.Com Honours (CMA)",
+        "B.Com Honours (ACCA)",
+        "B.Com (Investment Banking)",
+        "B.Com (Global Professional Qualifications)",
+        "BMS (Financial Services)",
+        "BMS (Aviation)",
+        "BMS (Healthcare)",
+        "BMS (International Business)",
+        "BMS (Leadership & Strategy)",
+
+        // Engineering Technology
         "B.Tech Computer Science & Engineering",
-        "B.Tech Electronics & Communication",
-        "B.Tech Mechanical Engineering",
+        "B.Tech Electrical and Electronics Engineering",
         "B.Tech Civil Engineering",
-        "Bachelor of Business Administration (BBA)",
-        "Bachelor of Science (B.Sc) Physics",
-        "Bachelor of Science (B.Sc) Chemistry",
-        "Bachelor of Arts (BA) Economics"
+        "B.Tech Mechanical Engineering",
+        "B.Tech Electronics & Communication Engineering",
+        "B.Sc Artificial Intelligence",
+        "B.Sc Data Analytics",
+        "B.Tech Computer Science and Business Systems",
+        "BCA",
+        "B.Sc Generative AI",
+        "B.Sc Cybersecurity",
+        "B.Tech AI & Data Science",
+        "B.Tech Robotics Engineering",
+        "B.Tech Mechatronics Engineering",
+        "B.Tech Information Science and Engineering",
+        "B.Tech Aerospace Engineering",
+        "B.Tech Aeronautical Engineering",
+
+        // Creative Arts Design
+        "B.Design (Product Design)",
+        "B.Design (Interaction Design)",
+        "B.Design (Communication Design)",
+        "B.Sc in Visual Communications",
+        "BA Communication Design - Animation & VFX",
+        "BA Communication Design - Graphic Design",
+        "BA Communication Design - UI/UX Design",
+        "BA - Film and Media",
+        "BA - Fashion Design",
+        "BA - Interactive Game Art, Design & Development",
+        "BFA - Painting",
+        "BFA - Sculpture",
+        "BFA - Photography",
+
+        // Law Humanities Social Science
+        "BA - Comprehensive",
+        "BA - History",
+        "BA - Psychology",
+        "BA - Sociology",
+        "BA - Political Science",
+        "BA - Economics",
+        "BA - English Literature",
+        "BA - Philosophy",
+        "BA - Journalism & Mass Communication",
+        "BA - International Relations",
+        "BA LLB (Hons)",
+        "BBA LLB (Hons)",
+
+        // Medical Healthcare
+        "B.Sc Medical Lab Technology",
+        "B.Sc Nuclear Medicine Technology",
+        "B.Sc Anesthesia & OT Technology",
+        "Bachelors of Occupational Therapy",
+        "B.Sc Psychology",
+        "B.Sc Cardiac Technology",
+        "Bachelors of Optometry",
+        "B.Sc Cancer Biology",
+        "B.Sc Imaging Technology",
+        "B.Sc Nutrition & Dietetics",
+        "B.Sc Respiratory Care Technology",
+        "B.Sc Urology & Reproductive Technology"
     ],
     pg: [
+        // Engineering
+        "M.Tech Embedded Systems & VLSI Design",
+        "M.Tech Energy & Environmental Management",
+        "M.Tech Structural Engineering",
+        "M.Tech Civil Engineering",
+        "M.Tech Electric Vehicle Technology",
+        "M.Tech Artificial Intelligence",
+        "M.Tech Data Science",
+        "M.Tech Cybersecurity",
         "M.Tech Computer Science & Engineering",
-        "M.Tech Electronics & Communication",
-        "Master of Business Administration (MBA)",
-        "Master of Science (M.Sc) Physics",
-        "Master of Science (M.Sc) Chemistry",
-        "Master of Arts (MA) Economics",
-        "Master of Computer Applications (MCA)",
-        "Ph.D Programs"
+
+        // Medical & Healthcare
+        "M.Sc Molecular Medicine & Stem Cell Technologies",
+        "M.Sc Cancer Biology",
+        "M.Sc Psychology - Clinical, Neuro Psychology",
+        "M.Sc Nutrition & Dietetics",
+        "M.Sc Hospital Administration",
+        "M.Sc Clinical Embryology & Assisted Reproductive Technology",
+        "M.Sc Virology and Immunology",
+
+        // Commerce & Management
+        "M.Com (FA with KPMG, ACCA, Electives)",
+        "MBA (CMS) - ESG & Aviation, Family Business Management",
+
+        // Computer Science & IT
+        "M.Sc Computer Science & IT",
+        "M.Sc Full Stack Development"
     ]
 };
 
