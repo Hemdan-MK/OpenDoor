@@ -32,6 +32,7 @@
 	<div class="cc-courses-wrapper scroll-reveal">
 		<% courses.forEach( async function(course) { %>
 		<div class="cc-course-item ">
+			<a href="/contactus">
 			<div class="cc-course-img-container scroll-reveal">
 				<img as="image" decoding="async" loading="eager" src="<%= course.imageUrl %>" alt="<%= course.title %>">
 				<div class="cc-course-img-overlay">
@@ -39,6 +40,7 @@
 					<p class="cc-course-duration">Duration: <%= course.duration %></p>
 				</div>
 			</div>
+		</a>
 			<div class="cc-course-body">
 				<div class="cc-course-desc">
 					<%= course.description %>
