@@ -10,6 +10,36 @@
 		<img src="/assets/logo2.webp" alt="Logo" class="logo" />
 	</div> -->
 
+<div class="loader-container" id="loader">
+  <img src="/assets/OPEN DOOR LOGO 1 CIRCLE.png" alt="Open Door Educations" class="loader-logo">
+  <div class="loader-text">Opening Doors to Your Future</div>
+</div>
+
+<!-- Add this JavaScript right before the closing </body> tag -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Show loader
+    const loader = document.getElementById('loader');
+    
+    // Hide the loader after 2 seconds
+    setTimeout(function() {
+      loader.style.opacity = '0';
+      
+      // Remove loader from DOM after fade out completes
+      setTimeout(function() {
+        loader.style.display = 'none';
+      }, 500);
+    }, 2000);
+    
+    // If page is loaded from cache (back button), hide loader immediately
+    window.onpageshow = function(event) {
+      if (event.persisted) {
+        loader.style.display = 'none';
+      }
+    };
+  });
+</script>
+
 	<%- include('./partials/navbar', {path: '/'}) %>
 
 	<%- include('./partials/modal') %>
