@@ -1,79 +1,3 @@
-const express = require('express');
-const router = express.Router();
-const sendMail = require('../utils/mail')
-
-
-router.get('/', (req, res) => {
-    res.render('home');
-});
-
-router.get('/about', (req, res) => {
-    res.render('about');
-});
-
-router.get('/college', (req, res) => {
-    res.render('colleges');
-});
-
-router.get('/courses', (req, res) => {
-    res.render('courses');
-});
-
-router.get('/contactus', (req, res) => {
-    res.render('form');
-});
-
-
-router.post('/send-form', async (req, res) => {
-    try {
-        // Get form data from request body
-        const formData = req.body;
-
-        // Validate required fields
-        const requiredFields = ['name', 'email', 'phone', 'place', 'gender',
-            'parentContact', 'programType', 'course', 'college'];
-
-        for (const field of requiredFields) {
-            if (!formData[field]) {
-                return res.status(400).json({
-                    success: false,
-                    message: `Missing required field: ${field}`
-                });
-            }
-        }
-
-        // Send email
-        const emailSent = await sendMail(formData);
-
-        if (emailSent) {
-            // You might want to save this data to a database here
-
-            // Send success response
-            return res.status(200).json({
-                success: true,
-                message: 'Registration successful! We will contact you shortly.'
-            });
-        } else {
-            return res.status(500).json({
-                success: false,
-                message: 'Failed to send notification email. Please try again.'
-            });
-        }
-    } catch (error) {
-        console.error('Error processing form submission:', error);
-        return res.status(500).json({
-            success: false,
-            message: 'Server error. Please try again later.'
-        });
-    }
-});
-
-
-
-
-
-
-
 const categoryData = {
     'business-management': {
         title: 'Commerce, Business & Management',
@@ -588,28 +512,204 @@ const courseData = {
             "duration": "3-4 years",
             "description": "This program covers urological diagnostics, reproductive health, and fertility treatments. Students learn to operate specialized equipment and assist in procedures, preparing for roles in urology units and fertility clinics.",
             "imageUrl": "/assets/medical and helathcare/urology.webp",
+"description": "This program focuses on creating compelling visual aesthetics and engaging experiences for games. Students develop skills in character design, environment art, 3D modeling, texturing, animation, game mechanics, level design, and user experience while learning industry-standard tools and collaborative development processes.",
+            "imageUrl": "/assets/Arts/gamedevelopment.webp",
+            "specializations": []
+        },
+        {
+            "title": "BFA - Painting",
+            "duration": "4 years",
+            "description": "The BFA in Painting program develops students' artistic vision and technical skills in various painting mediums. The curriculum covers color theory, composition, figurative and abstract approaches, mixed media techniques, and art history while encouraging personal expression and conceptual development through studio practice and critical discourse.",
+            "imageUrl": "/assets/Arts/painting.webp",
+            "specializations": []
+        },
+        {
+            "title": "BFA - Sculpture",
+            "duration": "4 years",
+            "description": "The BFA in Sculpture program explores three-dimensional art forms using traditional and contemporary approaches. Students learn various techniques including modeling, carving, casting, welding, and installation art while studying material properties, spatial concepts, and site-specific considerations to develop their unique artistic voice in three-dimensional expression.",
+            "imageUrl": "/assets/Arts/sculpture.webp",
+            "specializations": []
+        },
+        {
+            "title": "BFA - Photography",
+            "duration": "4 years",
+            "description": "The BFA in Photography program explores visual storytelling through the photographic medium. Students develop technical expertise in digital and analog photography, lighting, composition, post-processing, and printing while engaging with photographic theory, history, and contemporary practices to create compelling visual narratives across various photographic genres.",
+            "imageUrl": "/assets/Arts/photography.webp",
+            "specializations": []
+        }
+    ],
+    'law-humanities-social-science': [
+        {
+            "title": "BA - Comprehensive",
+            "duration": "3 years",
+            "description": "A versatile liberal arts degree covering multiple humanities disciplines. Students develop critical thinking, cultural awareness, and communication skills applicable to diverse career paths.",
+            "imageUrl": "/assets/humanities/comprehensive.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - History",
+            "duration": "3 years",
+            "description": "Explores historical periods, movements, and figures while developing research and analytical skills. Prepares students for careers in education, research, journalism, and public history.",
+            "imageUrl": "/assets/humanities/history.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - Psychology",
+            "duration": "3 years",
+            "description": "Examines human behavior, cognition, and mental processes. Students gain insights into human development, abnormal psychology, and research methods for careers in counseling, HR, education, and social services.",
+            "imageUrl": "/assets/humanities/psychology.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - Sociology",
+            "duration": "3 years",
+            "description": "Studies social structures, institutions, and human relationships. Students analyze social problems, inequality, and cultural diversity while developing research skills for careers in social work, community development, and policy analysis.",
+            "imageUrl": "/assets/humanities/sociology.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - Political Science",
+            "duration": "3 years",
+            "description": "Examines politics, governance, and policy-making. Students analyze political systems, international relations, and contemporary issues while developing critical thinking and advocacy skills for careers in government, law, diplomacy, and public service.",
+            "imageUrl": "/assets/humanities/political science.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - Economics",
+            "duration": "3 years",
+            "description": "Studies economic theory, markets, and policies. Students analyze financial systems, development issues, and resource allocation while developing quantitative and analytical skills for careers in business, finance, policy analysis, and government.",
+            "imageUrl": "/assets/humanities/economics.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - English Literature",
+            "duration": "3 years",
+            "description": "Explores literary works, movements, and criticism. Students develop analytical, writing, and communication skills through engagement with diverse texts, preparing for careers in education, publishing, media, and communication.",
+            "imageUrl": "/assets/humanities/english literature.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - Philosophy",
+            "duration": "3 years",
+            "description": "Examines fundamental questions about existence, knowledge, ethics, and reality. Students develop logical reasoning, critical thinking, and ethical analysis skills applicable to law, business ethics, policy-making, and education.",
+            "imageUrl": "/assets/humanities/philosophy.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - Journalism & Mass Communication",
+            "duration": "3 years",
+            "description": "Focuses on news reporting, media production, and communication theory. Students develop writing, editing, and production skills across various media platforms for careers in journalism, public relations, and content creation.",
+            "imageUrl": "/assets/humanities/journalism.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA - International Relations",
+            "duration": "3 years",
+            "description": "Examines global politics, diplomacy, and cross-cultural issues. Students analyze international conflicts, cooperation, and global governance while developing skills for careers in diplomacy, international organizations, and global business.",
+            "imageUrl": "/assets/humanities/international relation.webp",
+            "specializations": []
+        },
+        {
+            "title": "BA LLB (Hons)",
+            "duration": "5 years",
+            "description": "An integrated program combining humanities with legal education. Students develop critical thinking, legal reasoning, and advocacy skills for careers in litigation, corporate law, and legal policy.",
+            "imageUrl": "/assets/humanities/llb1.webp",
+            "specializations": []
+        },
+        {
+            "title": "BBA LLB (Hons)",
+            "duration": "5 years",
+            "description": "Combines business administration with legal studies. Students develop management, financial, and legal expertise for careers in corporate law, business compliance, and legal consulting.",
+            "imageUrl": "/assets/humanities/llb2.webp",
+            "specializations": []
+        }
+    ],
+    'medical-healthcare': [
+        {
+            "title": "B.Sc Medical Lab Technology",
+            "duration": "3-4 years",
+            "description": "This program trains students in clinical laboratory techniques used for disease diagnosis and treatment. It covers medical diagnostics, lab procedures, and healthcare technologies, preparing graduates for roles in hospitals and diagnostic labs.",
+            "imageUrl": "/assets/medical and helathcare/medical lab.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Nuclear Medicine Technology",
+            "duration": "3-4 years",
+            "description": "The B.Sc in Nuclear Medicine Technology is an advanced undergraduate program that focuses on the use of radioactive materials for the diagnosis and treatment of various diseases, including cancer and cardiovascular conditions.",
+            "imageUrl": "/assets/medical and helathcare/nuclear medicine.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Anesthesia & OT Technology",
+            "duration": "3-4 years",
+            "description": "This program trains students in anesthesia techniques, patient monitoring, and OT management. It prepares graduates to assist anesthesiologists and surgeons during surgical procedures.",
+            "imageUrl": "/assets/medical and helathcare/anesthasia.webp",
+            "specializations": []
+        },
+        {
+            "title": "Bachelors of Occupational Therapy",
+            "duration": "4-5 years",
+            "description": "The Bachelor of Occupational Therapy (BOT) is a professional undergraduate program that focuses on helping individuals regain independence and improve their quality of life through therapeutic techniques.",
+            "imageUrl": "/assets/medical and helathcare/occupational.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Psychology",
+            "duration": "3-4 years",
+            "description": "This program explores human behavior, mental processes, and mental health. Students gain foundational knowledge in psychological theories, research methods, and applications in clinical, counseling, and organizational settings.",
+            "imageUrl": "/assets/medical and helathcare/psycho.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Cardiac Technology",
+            "duration": "3-4 years",
+            "description": "This program trains students to assist in diagnosing and treating heart conditions. It covers cardiac procedures, patient care, and the use of advanced equipment in cardiovascular healthcare.",
+            "imageUrl": "/assets/medical and helathcare/cardiac.webp",
+            "specializations": []
+        },
+        {
+            "title": "Bachelors of Optometry",
+            "duration": "4 years",
+            "description": "The Bachelor of Optometry (B.Optom) is a specialized undergraduate program that focuses on eye care, vision correction, and diagnosing ocular diseases. This course equips students with the knowledge and practical skills required to assess vision problems, prescribe corrective lenses, and detect eye diseases, preparing them for a crucial role in healthcare.",
+            "imageUrl": "/assets/medical and helathcare/optho.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Cancer Biology",
+            "duration": "3-4 years",
+            "description": "The B.Sc in Cancer Biology is an advanced undergraduate program focused on the study of cancer, its causes, progression, diagnosis, and treatment. This course provides students with a strong foundation in molecular biology, genetics, immunology, and oncology, preparing them for careers in medical research, diagnostics, and healthcare.",
+            "imageUrl": "/assets/medical and helathcare/cancer biology.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Imaging Technology",
+            "duration": "3-4 years",
+            "description": "This program trains students in X-ray, MRI, CT, ultrasound, and other imaging techniques. It focuses on equipment handling, patient positioning, and radiation safety for diagnostic accuracy.",
+            "imageUrl": "/assets/medical and helathcare/imagine.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Nutrition & Dietetics",
+            "duration": "3-4 years",
+            "description": "This program covers food science, clinical and community nutrition, and diet therapy. Students learn to create personalized diet plans, manage clinical nutrition, and promote public health through dietary guidance.",
+            "imageUrl": "/assets/medical and helathcare/nutrition.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Respiratory Care Technology",
+            "duration": "3-4 years",
+            "description": "This program trains students to diagnose and manage cardiopulmonary disorders, operate respiratory equipment, and assist in critical care. Graduates work with patients facing chronic respiratory issues, sleep disorders, and emergencies.",
+            "imageUrl": "/assets/medical and helathcare/respiratory.webp",
+            "specializations": []
+        },
+        {
+            "title": "B.Sc Urology & Reproductive Technology",
+            "duration": "3-4 years",
+            "description": "This program covers urological diagnostics, reproductive health, and fertility treatments. Students learn to operate specialized equipment and assist in procedures, preparing for roles in urology units and fertility clinics.",
+            "imageUrl": "/assets/medical and helathcare/urology.webp",
             "specializations": []
         }
     ]
 };
 
-router.get('/courses/ug/:category', (req, res) => {
-    const category = req.params.category;
-
-    if (!categoryData[category]) {
-        return res.status(404).send('Category not found');
-    }
-
-    res.render('ug-course-catalog', {
-        category: categoryData[category],
-        courses: courseData[category]
-    });
-});
-
-router.get('/courses/pg/pg-programs', (req, res) => {
-    res.render('pg-course-catalog');
-});
-
-
-
-module.exports = router
+module.exports = { categoryData, courseData };
